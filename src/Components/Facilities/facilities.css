@@ -1,0 +1,208 @@
+* {
+  font-family: 'Arial', sans-serif; 
+  font-style: normal; 
+
+  margin: 0; 
+  padding: 0; 
+}
+
+/* Facilities Container */
+.facilities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 40px 20px;
+  background-color:whitesmoke;
+  padding: 20px;
+  text-align: center;
+}
+
+.facilities-container h1{
+  text-align: center;
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 10px;
+
+}
+
+/* Image Section */
+.facilities-images {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  margin-top: -40px;
+}
+
+.products-gallery {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 20px; 
+}
+
+.product-card {
+  width: 300px; 
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px; 
+  background-color: #fff; 
+  gap:20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card img {
+  width: 100%; 
+  height: auto; 
+  border-radius: 8px; 
+  width: 100%;   
+  max-width: 250px; 
+  height: auto;   
+  object-fit: contain; 
+  margin-top: 0;
+}
+
+
+.product-card h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  color:black;
+   /* Text color */
+   font-weight: bold;
+}
+
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+ 
+}
+
+
+.facility-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Information Section */
+.facilities-info {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  max-width: 800px;
+  margin: 0 auto; 
+  color: black;
+}
+
+.facilities-info:hover{
+  background-color:#fb8c4b; 
+
+}
+.facilities-info p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.facilities-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facilities-info ul li {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  color:black;
+}
+.facilities-info ul li::before {
+  content: "✔"; /* Checkmark bullet */
+  position: absolute;
+  left: 0;
+  color: black; /* Blue for emphasis */
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .images-grid {
+    flex-direction: column; /* Stack images vertically on small screens */
+    align-items: center;
+  }
+
+  .facility-image {
+    width: 80%; /* Reduce width for smaller devices */
+    height: auto;
+  }
+
+  .facilities-info {
+    padding: 20px;
+  }
+
+  .facilities-info p {
+    font-size: 1rem;
+  }
+
+  .facilities-info ul li {
+    font-size: 1rem;
+  }
+}
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .product-card img {
+    max-width: 200px; /* Smaller size on medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card img {
+    max-width: 180px; /* Smaller size for tablets */
+  }
+
+  .slick-slide {
+    padding: 0 10px; /* Add space between slides */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card img {
+    max-width: 150px; /* Even smaller size for smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .product-card img {
+    max-width: 120px; /* Smallest size for very small screens */
+  }
+}
+
+/* Additional styling for slider */
+.slick-dots {
+  bottom: -30px;
+}
+
+.slick-prev, .slick-next {
+  font-size: 20px;
+  color: #333;
+  opacity: 0.7;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  opacity: 1;
+}

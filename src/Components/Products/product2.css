@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+  font-family: 'Arial', sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure padding/margin doesn't mess with sizes */
+}
+
+.page {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:white;
+  padding: 20px;
+  font-weight: bold;
+  min-height: 100vh; /* Use min-height to prevent squeezing */
+  overflow: hidden;
+  color: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px; 
+  box-sizing: border-box; 
+  width: 100%;
+  min-height: 100%; 
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(243, 229, 229, 0.1);
+  border-radius: 8px;
+ 
+}
+
+.container h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Row for desktop view */
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px; /* Spacing between text and image */
+  flex-wrap: wrap; /* Wrap content for smaller screens */
+  width: 100%;
+}
+
+.image {
+  width: 30%; 
+  max-width: 400px;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 0;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  flex: 1;
+  margin-top: 10px; /* Add spacing for better 
+  readability */
+  word-wrap: break-word; /* Break long words to prevent cutting */
+  overflow-wrap: break-word; /* Ensure long text doesn’t overflow */
+}
+
+.content h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.content ul {
+  list-style-type: disc;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.content ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack image and text */
+    align-items: center; /* Center-align the content */
+  }
+
+  .image {
+    width: 80%; /* Reduce image width */
+    
+    margin: 0 auto; /* Center the image */
+  }
+  .content p {
+    font-size: 14px; /* Adjust text size for smaller screens */
+    text-align: left; /* Center-align text */
+    padding: 0 10px; /* Add padding to prevent cutting */
+  }
+ 
+
+  .content ul {
+    padding-left: 0; /* Remove indentation on mobile */
+    text-align:center;
+  }
+
+  .container {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .container h1 {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width: 90%; /* Further reduce image width for very small screens */
+  }
+
+  .content p {
+    font-size: 14px; /* Reduce text size for readability */
+    padding: 0 15px;
+  }
+
+  .content h3 {
+    font-size: 14px;
+  }
+}
